@@ -1,3 +1,8 @@
+This project is a pics gallery get from Flickr according to the tag provided. Gives user an ability to apply a few effects to all pics.
+To be able to get images from Flickr user has to provide his API key in file /src/config.js.
+
+---------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
