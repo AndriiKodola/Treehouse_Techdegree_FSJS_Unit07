@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 const Header = (props) => (
   <>
     <SearchForm changeTopic={props.changeTopic} />
-    <NavBar />
+    <NavBar changeTopic={props.changeTopic} />
   </>
 );
 
