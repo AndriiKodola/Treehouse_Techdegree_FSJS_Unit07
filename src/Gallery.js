@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import randomWords from 'random-words';
 
 import GalleryItemList from './GalleryItemList';
 import NotFound from './NotFound';
@@ -18,12 +19,19 @@ const Gallery = (props) => {
     <div className="photo-container">
       <h2>Results</h2>
       {numOfMatchesInfo}
+      {
+
+      }
       <Switch>
         <Route exact path="/" render={() => <GalleryItemList effects={null} pics={props.pics} />} />
         <Route path="/initial" render={() => <GalleryItemList effects={null} pics={props.pics} />} />{/*Renders initial look of the pictures*/}
         <Route path="/grayscale" render={() => <GalleryItemList effects="greyscale" pics={props.pics} />} />{/*Renders pictures with grayscale filter via CSS*/}
         <Route path="/frames" render={() => <GalleryItemList effects="with-frame" pics={props.pics} />} />{/*Renders pictures with nice frames via CSS*/}
         <Route path="/chaotic" render={() => <GalleryItemList effects="chaotic" pics={props.pics} />} />{/*Renders pictures with random rotation via React stylings*/}
+        <Route path="/random" render={() => {
+            props.changeTopic(randomWords());
+            return <Redirect to={{ pathname: "/" }} />
+          }} />{/*Renders new random data to meet project requirements*/}
         <Route render={() => <NotFound changeTopic={props.changeTopic} />} />{/*Renders 404-like message*/}
       </Switch>
     </div>
