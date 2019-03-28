@@ -18,9 +18,6 @@ const Gallery = (props) => {
     <div className="photo-container">
       <h2>Results</h2>
       {numOfMatchesInfo}
-      {
-
-      }
       <Switch>
         <Route exact path="/" render={() => <GalleryItemList effects={null} pics={props.pics} />} />
         <Route path="/initial" render={() => <GalleryItemList effects={null} pics={props.pics} />} />{/*Renders initial look of the pictures*/}

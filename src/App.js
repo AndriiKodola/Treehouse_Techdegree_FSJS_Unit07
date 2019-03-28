@@ -18,8 +18,10 @@ class App extends Component {
     this.handleChangeTopic();
   }
 
-  componentDidUpdate() {
-   this.handleChangeTopic();
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.topic !== prevState.topic) {
+      this.handleChangeTopic();
+    }
   }
 
   //Gets new pics from Flickr according ot the topic in state
