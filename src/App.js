@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import axios from 'axios';
 import apiKey from './config';
 
@@ -48,7 +48,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="container">
           <Header changeTopic={this.changeTopic} />
           {
@@ -57,7 +57,7 @@ class App extends Component {
             : <Gallery pics={this.state.pics} changeTopic={this.changeTopic} />
           }
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
