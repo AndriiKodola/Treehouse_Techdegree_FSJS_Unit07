@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Treehouse_Techdegree_FSJS_Unit07/precache-manifest.d45b472833f095d90fbc3b080c82672c.js"
+  "/Treehouse_Techdegree_FSJS_Unit07/precache-manifest.caac762b62672c07a5bedcd908d66c74.js"
 );
 
 workbox.clientsClaim();
